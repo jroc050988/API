@@ -1,0 +1,244 @@
+header{
+    text-align: center;
+    width: 100%;
+    height: 380px;
+    background-image: url('../img/hero.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    h1{
+        color: $baseColor;
+        letter-spacing: 5px;
+        font-weight: 500;
+        margin: 0 auto;
+        padding-top: 89px;
+        font-size: $bigfont;
+    }
+    select{
+        width: 452px;
+        height: 48px;
+        margin-top: 90px;
+        padding:9.5px;
+        background-color: rgba(255, 255, 255, 0.7);
+        letter-spacing: 2px;
+        font-weight: 700;
+        border: 3px solid $baseColor;
+        border-radius: 3px;
+        font-size: $fontsize - 2px;
+        cursor: pointer;
+        option{
+            margin-left:9.5px ;
+        }
+    }
+}
+.menu{
+    width: 800px;
+    height: 112px;
+    margin: -28px auto 0;
+    background-color: $baseColor;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+    border-radius: 5px;
+    z-index: 99;
+    .menuTittle{
+        padding-top: 20px;
+        padding-left: 26px;
+        font-size: $fontsize - 2px;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        margin-top: 14px;
+        margin-left: 51px;
+        padding: 0;
+        li{
+            margin-right: 23px;
+            font-size: $fontsize;
+            padding: 11px 34px;
+            border-radius: 5px;
+            color: $baseColor;  
+            border-radius: 5px;
+            cursor: pointer;  
+        }
+        .menu0{
+            background-color: $color0;
+            &:hover{
+                background-color: darken($color0,20%);
+            }
+        }
+        .menu1{
+            background-color: $color1;
+            &:hover{
+                background-color: darken($color1,20%);
+            }
+        }
+        .menu2{
+            background-color: $color2;
+            &:hover{
+                background-color: darken($color2,20%);
+            }
+        }
+        .menu3{
+            background-color: $color3;
+            &:hover{
+                background-color: darken($color3,20%);
+            }
+        }
+    }
+}
+.line{
+    position: relative;
+    width: 900px;
+    height: 76px;
+    border-top: 1px dashed $color3;
+    margin: 49px auto 0;
+    .down{
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border: 1px solid $color3;
+        border-radius: 24px;
+        left: 439px;
+        top: -11px;
+        background-color: $baseColor;
+        .triangle{
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 8px 0 8px;
+            border-color: $color3 transparent transparent transparent;
+            left: 4px;
+            top: 7.5px;
+        }
+    }
+}
+
+    
+h2{
+    font-weight: 500;
+    font-size: $bigfont - 4px;
+    color: $color0;
+    text-align: center;
+}
+.all{
+    max-width: 960px;
+    margin: auto;
+}
+.content{
+    width: 464px;
+    height: 273px;
+    background: $baseColor;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+    display: inline-block;
+    margin: 0 8px 36px 8px;
+    .contentTittle{
+        position: relative;
+        width: 100%;
+        height: 155px;
+        background-position-y: 85%;
+        background-size: cover;
+        .name{
+            position: absolute;
+            bottom: 14px;
+            left: 22px;
+            color: $baseColor;
+            font-size: $fontsize +4px;
+            font-weight: 700;
+        }
+        .zipcode{
+            position: absolute;
+            bottom: 11px;
+            right: 24px;
+            font-size: $fontsize - 4px;
+            color: $baseColor;
+            background: rgba(51, 51, 51, 0.3);
+        }
+    }
+    .detail{
+        padding-top: 16px;
+        margin-left: 23px;
+        font-size: $fontsize -4px;
+    }
+    .opentime::before{
+        content: '';
+        background-image: url(../img/icons_clock.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 0 9px 0 9px;
+        margin-right: 9px;
+    }
+    .add::before{
+        content: '';
+        background-image: url(../img/icons_pin.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 0 9px 0 9px;
+        margin-right: 9px;
+    }
+    .tel::before{
+        content: '';
+        background-image: url(../img/icons_phone.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 0 9px 0 9px;
+        margin-right: 9px;
+    }
+}
+.page-normal{
+    display: flex;
+    justify-content: center;
+   .page{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        li{
+            cursor: pointer;
+            padding: 5px 8px ;            
+            &:hover{
+                color: $baseColor;
+                background-color: $color3;
+                border-radius: 3px;
+            }
+        }
+        .click{
+            color: $baseColor;
+            background-color: $color3;
+            border-radius: 3px;
+        }
+    }
+    .prev{
+        cursor: pointer;
+        padding: 21px 26.5px;
+        &::before{
+            content: "<";
+            padding-right: 5px;
+        }
+        &:hover{
+            color:$color3;
+        }
+    }
+    .next{
+        cursor: pointer;
+        padding: 21px 26.5px;
+        &::after{
+            content: ">";
+            padding-left: 5px;
+        }
+        &:hover{
+            color:$color3;
+        }
+    } 
+}
+footer{
+    margin-top: 18px;
+    background-color: $color3;
+    text-align: center;
+    padding: 24px 0;
+    .Kaohsiung{
+        color: $baseColor;
+    }
+    .source{
+        padding-top: 15px;
+        color: $color2;
+    }
+}
