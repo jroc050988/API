@@ -28,6 +28,9 @@ header{
         option{
             margin-left:9.5px ;
         }
+        @include phone{
+            width: 80%;
+        }
     }
 }
 .menu{
@@ -38,6 +41,12 @@ header{
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
     border-radius: 5px;
     z-index: 99;
+    @include ipad{
+        max-width: 600px;
+    }
+    @include phone{
+        max-width: 100%;
+    }
     .menuTittle{
         padding-top: 20px;
         padding-left: 26px;
@@ -49,6 +58,9 @@ header{
         margin-top: 14px;
         margin-left: 51px;
         padding: 0;
+        @include phone{
+            margin: 0;
+        }
         li{
             margin-right: 23px;
             font-size: $fontsize;
@@ -56,7 +68,15 @@ header{
             border-radius: 5px;
             color: $baseColor;  
             border-radius: 5px;
-            cursor: pointer;  
+            cursor: pointer;
+            @include ipad{
+                padding: 11px 25px;
+            }
+            @include phone{
+                margin: 6px;
+                text-align: center;
+                
+            }  
         }
         .menu0{
             background-color: $color0;
@@ -90,14 +110,21 @@ header{
     height: 76px;
     border-top: 1px dashed $color3;
     margin: 49px auto 0;
+    @include ipad{
+        width: 600px;
+    }
+    @include phone{
+        width:300px
+    }
     .down{
         position: absolute;
         width: 24px;
         height: 24px;
         border: 1px solid $color3;
         border-radius: 24px;
-        left: 439px;
+        left: 50%;
         top: -11px;
+        margin: 0 -12px 0 0;
         background-color: $baseColor;
         .triangle{
             position: absolute;
@@ -122,6 +149,12 @@ h2{
 .all{
     max-width: 960px;
     margin: auto;
+    @include ipad{
+        width: 464px;
+    }
+    @include phone{
+        width: 300px;
+    }
 }
 .content{
     width: 464px;
@@ -130,6 +163,13 @@ h2{
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
     display: inline-block;
     margin: 0 8px 36px 8px;
+    @include ipad{
+        margin: 8px auto;
+    }
+    @include phone{
+        width: 300px;
+        height: 325px;
+    }
     .contentTittle{
         position: relative;
         width: 100%;
@@ -157,6 +197,11 @@ h2{
         padding-top: 16px;
         margin-left: 23px;
         font-size: $fontsize -4px;
+        height:  20px;
+        @include phone{
+            padding-top: 30px;
+            margin-left: 10px;
+        }
     }
     .opentime::before{
         content: '';
